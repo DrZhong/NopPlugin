@@ -1,0 +1,8 @@
+﻿Group: _NopUI
+FriendlyName: 三美商城核心插件
+SystemName: NopUI.Core
+Version: v1.00
+SupportedVersions: 3.40
+Author: DrZhong
+DisplayOrder: -1
+FileName: NopUI.Core.dll
