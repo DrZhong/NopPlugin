@@ -1,0 +1,8 @@
+﻿Group: _NopUI.Widgets
+FriendlyName: 商品单位扩展
+SystemName: Widgets.Unit
+Version: v1.05
+SupportedVersions: 3.40
+Author: DrZhong
+DisplayOrder: 1
+FileName: NopUI.Plugin.Widgets.Unit.dll

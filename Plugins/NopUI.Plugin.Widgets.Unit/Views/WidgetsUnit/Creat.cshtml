@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "_AdminLayout.cshtml";
+}
+@model NopUI.Plugin.Widgets.Unit.Models.UnitModel
+@using (Html.BeginForm())
+{
+    <div class="section-header">
+      <div class="title">
+        <img src="/Administration/Content/images/ico-catalog.png" alt="">
+        添加商品分类
+        <a href="javascript:history.go(-1)">(返回单位列表)</a>
+    </div>
+       <div class="options">
+        <button type="submit" class="k-button">@T("save")</button>
+    </div>
+    </div>
+    @Html.Partial("_CreateOrUpdateUnit", Model)
+}

@@ -1,0 +1,6 @@
+﻿@model CustomerNavigationModel
+@using Nop.Web.Models.Customer;
+<li class="@if (Model.SelectedTab == CustomerNavigationEnum.SecondHand){<text>active</text>}">
+    <a href="@Url.RouteUrl("Plugin.Widgets.SecondHand.SecondHandList")"><div>@T("Account.SecondHandReturnRequests") </div></a>
+
+</li>

@@ -9,7 +9,7 @@ namespace NopUI.Core
     {
         public void RegisterRoutes(RouteCollection routes)
         {
-            ViewEngines.Engines.Insert(0, new CustomViewEngine());
+           // ViewEngines.Engines.Insert(0, new CustomViewEngine());
         }
         public int Priority
         {

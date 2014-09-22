@@ -1,0 +1,93 @@
+﻿@{
+    Layout = "_AdminLayout.cshtml";
+}
+<div class="section-header">
+    <div class="title">
+        <img src="/Administration/Content/images/ico-catalog.png" alt="">
+        单位管理
+    </div>
+    <div class="options">
+        <a href="@Html.Raw(Url.Action("Creat", "WidgetsUnit", new { namespaces = "NopUI.Plugin.Widgets.Unit.Controllers" }))" class="k-button">添加</a>
+    </div>
+</div>
+<div id="trials-grid"></div>
+<script>
+    $(document).ready(function () {
+        $("#trials-grid").kendoGrid({
+            dataSource: {
+                type: "json",
+                transport: {
+                    read: {
+                        url: "@Html.Raw(Url.Action("Manage", "WidgetsUnit"))",
+                        type: "POST",
+                        dataType: "json"
+                    },
+                    update: {
+                        url: "@Html.Raw(Url.Action("Update", "WidgetsUnit"))",
+                        type: "POST",
+                        dataType: "json"
+                    },
+                    destroy: {
+                        url: "@Html.Raw(Url.Action("Delete", "WidgetsUnit"))",
+                        type: "POST",
+                        dataType: "json"
+                    }
+                },
+                schema: {
+                    data: "Data",
+                    total: "Total",
+                    errors: "Errors",
+                    model: {
+                        id: "Id",
+                        fields: {
+                            Name: { editable: true, type: "string" },
+                            DisplayOrder: { editable: true, type: "number" }
+                        }
+                    }
+                },
+                requestEnd: function (e) {
+                    if (e.type == "update") {
+                        this.read();
+                    }
+                },
+                error: function (e) {
+                    display_kendoui_grid_error(e);
+                    // Cancel the changes
+                    this.cancelChanges();
+                },
+                serverPaging: true,
+                serverFiltering: true,
+                serverSorting: true
+            },
+            pageable: {
+                refresh: true,
+                numeric: false,
+                previousNext: false,
+                info: false
+            },
+            editable: {
+                confirmation: true,
+                mode: "inline"
+            },
+            scrollable: false,
+            columns: [{
+                field: "Name",
+                title: "单位名称",
+                width: 200
+            }, {
+                field: "DisplayOrder",
+                title: "排序",
+                width: 150
+            },{
+                command: [{
+                    name: "edit",
+                    text: "@T("Admin.Common.Edit")"
+                }, {
+                    name: "destroy",
+                    text: "@T("Admin.Common.Delete")"
+                }],
+                width: 200
+            }]
+        });
+    });
+</script>

@@ -1,0 +1,36 @@
+﻿@model NopUI.Plugin.Widgets.Unit.Models.UnitSelectItem
+@using System.Web;
+<table class="adminContent">
+    @*计量单位*@
+    <tr>
+        <td class="adminTitle">
+           单位:
+        </td>
+        <td class="adminData">
+            @Html.DropDownListFor(x=>x.UnitId, ViewBag.selectItems as List<SelectListItem>)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" id="UnitBtn" name="save" class="k-button" value="保存">
+        </td>
+        <td>
+            <div id="msg" style="display:none;color:#1557bf"></div>
+        </td>
+    </tr>
+    @*计量单位 END *@
+</table>
+<script>
+    $("#UnitBtn").click(function () {
+        var data = {UnitId:$("#UnitId").val(),productId:$("#Id").val()};
+        var msgContent = $("#msg");
+
+        $.post('@Url.RouteUrl("Plugin.Widgets.Unit.ProductUnitSave")', data, function (msg) {
+            msgContent.html(msg)
+            msgContent.show(1000);
+            setTimeout(function () {
+                msgContent.hide(1000);
+            }, 2000)
+        })
+    });
+</script>

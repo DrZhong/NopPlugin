@@ -95,6 +95,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SanmeiPlugins", "_SanmeiPl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NopUI.Core", "Plugins\NopUI.Core\NopUI.Core.csproj", "{FCBE7FDC-B1B9-4B76-9797-661C82078AFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NopUI.Plugin.Widgets.Unit", "Plugins\NopUI.Plugin.Widgets.Unit\NopUI.Plugin.Widgets.Unit.csproj", "{B996C91E-0334-4FA6-84EA-80A4193A4EF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -515,6 +517,16 @@ Global
 		{FCBE7FDC-B1B9-4B76-9797-661C82078AFE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{FCBE7FDC-B1B9-4B76-9797-661C82078AFE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{FCBE7FDC-B1B9-4B76-9797-661C82078AFE}.Release|x86.ActiveCfg = Release|Any CPU
+		{B996C91E-0334-4FA6-84EA-80A4193A4EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B996C91E-0334-4FA6-84EA-80A4193A4EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B996C91E-0334-4FA6-84EA-80A4193A4EF8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B996C91E-0334-4FA6-84EA-80A4193A4EF8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B996C91E-0334-4FA6-84EA-80A4193A4EF8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B996C91E-0334-4FA6-84EA-80A4193A4EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B996C91E-0334-4FA6-84EA-80A4193A4EF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B996C91E-0334-4FA6-84EA-80A4193A4EF8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B996C91E-0334-4FA6-84EA-80A4193A4EF8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B996C91E-0334-4FA6-84EA-80A4193A4EF8}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -562,6 +574,7 @@ Global
 		{6216A5CA-8599-4B53-8E70-F21CC6D4273C} = {7881B112-7843-4542-B1F7-F99553FB9BB7}
 		{AF9DF5B8-5991-4E1E-A497-E73F0F197186} = {7881B112-7843-4542-B1F7-F99553FB9BB7}
 		{FCBE7FDC-B1B9-4B76-9797-661C82078AFE} = {AF9DF5B8-5991-4E1E-A497-E73F0F197186}
+		{B996C91E-0334-4FA6-84EA-80A4193A4EF8} = {AF9DF5B8-5991-4E1E-A497-E73F0F197186}
 	EndGlobalSection
 	GlobalSection(NDepend) = preSolution
 		Project = ".\NopCommerce.ndproj"

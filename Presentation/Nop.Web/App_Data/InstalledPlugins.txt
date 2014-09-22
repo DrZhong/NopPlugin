@@ -1,0 +1,2 @@
+NopUI.Core
+Widgets.Unit
